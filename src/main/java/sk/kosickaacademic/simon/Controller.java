@@ -1,6 +1,5 @@
 package sk.kosickaacademic.simon;
 
-import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
