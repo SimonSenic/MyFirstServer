@@ -2,6 +2,7 @@ package sk.kosickaacademic.simon.controller;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -14,7 +15,7 @@ public class Controller {
     }
 
     @RequestMapping(path = "/name/yourname", method = RequestMethod.POST)
-    public String printName(@RequestBody String input) throws Exception{
+    public String printName(@RequestBody String input) throws ParseException {
         JSONObject obj = (JSONObject) new JSONParser().parse(input);
         return "Hey " +obj.get("name") +"! Your age is " +obj.get("age");
     }
